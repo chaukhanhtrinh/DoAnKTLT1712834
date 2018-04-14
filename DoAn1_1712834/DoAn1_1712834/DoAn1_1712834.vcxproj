@@ -112,7 +112,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Source_HTML.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CreateHTML.h" />
+    <ClInclude Include="SV.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
