@@ -1,4 +1,5 @@
-﻿#include"CreateHTML.h"
+﻿#define _CRT_SECURE_NO_WARNINGS
+#include"CreateHTML.h"
 
 void Title(wchar_t str[], wchar_t name[]) {
 	int i = 0;
