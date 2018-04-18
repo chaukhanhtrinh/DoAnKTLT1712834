@@ -10,13 +10,12 @@
 int main() {
 	_setmode(_fileno(stdout), _O_U16TEXT);
 
-	wchar_t test[] = L"Trường 1,Trường 2,\"Trường, 3\",\"Trường, 4\"";
-	wchar_t *p = Token(test, L',', L'\"');
-	int n = 1;
-	while (p) {
-		wprintf(L"%d: %ls\n",n++, p);
-		p = Token(NULL, L',', L'\"');
-	}
+	SV sv;
+	FileToSV(sv, L"Tri.csv");
+
+	In(sv);
+
+	FreeSV(sv);
 
 	_getche();
 	return 0;
