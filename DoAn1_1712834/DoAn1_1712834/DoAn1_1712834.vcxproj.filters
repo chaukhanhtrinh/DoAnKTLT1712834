@@ -27,12 +27,18 @@
     <ClCompile Include="Source_SV.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HTML.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CreateHTML.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SV.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HTML.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

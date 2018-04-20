@@ -1,8 +1,8 @@
 ﻿#include"SV.h"
 
 void In(SV sv) {
-	wprintf(L"Tên: %ls\n", sv.name);
 	wprintf(L"MSSV: %s\n", sv.mssv);
+	wprintf(L"Tên: %ls\n", sv.name);
 	wprintf(L"Khoa: %ls\n", sv.fac);
 	wprintf(L"Khóa: %d\n", sv.year);
 	wprintf(L"Mail: %ls\n", sv.mail);
@@ -25,4 +25,18 @@ void FreeSV(SV &sv) {
 	for (unsigned int i = 0; i < sv.hobby_count; i++)
 		free(sv.hobby[i]);
 	free(sv.hobby);
+}
+
+void InDL(CSDL &ds) {
+	for (unsigned int i = 0; i < ds.sl; i++) {
+		wprintf(L"SV số %d:\n", i + 1);
+		In(ds.ds[i]);
+		wprintf(L"==========\n");
+	}
+}
+
+void FreeCSDL(CSDL &ds) {
+	for (unsigned int i = 0; i < ds.sl; i++)
+		FreeSV(ds.ds[i]);
+	free(ds.ds);
 }
